@@ -1,0 +1,340 @@
+
+
+using System;
+public class Hello{
+    public static void marks(){
+        Console.WriteLine("enter student marks upto 100 only");
+        float marks=Convert.ToInt32(Console.ReadLine());
+        if(marks>33 && marks<34){
+            Console.WriteLine("student just passed with E grade");
+    }
+    
+    else if(marks<33){
+        Console.WriteLine("student failed in the examination");
+    }
+    
+    else if(marks > 33 && marks< 60){
+        Console.WriteLine("he/she achieved the B grade");
+    }
+    
+    else if(marks>60 && marks <=89){
+        Console.WriteLine("he/ she achieved the c grade");
+    }
+    
+    else if(marks>89 && marks<=100){
+        Console.WriteLine("he/she achieved the A+ grade");
+    }
+    
+    else if(marks>100){
+    Console.WriteLine("invalid way of entering marks try again");
+    }
+}
+
+
+
+
+
+
+
+public static void calculator(){
+    Console.WriteLine("enter a and b values");
+    int a=Convert.ToInt32(Console.ReadLine());
+    int b=Convert.ToInt32(Console.ReadLine());
+    char ch=Convert.ToChar(Console.ReadLine());
+    
+    
+    switch(ch){
+        case '+':
+        Console.WriteLine("the addition is "+(a+b));
+        break;
+        
+        case'-':
+        Console.WriteLine("the subtraction is "+(a-b));
+        break;
+        
+        case'*':
+        Console.WriteLine("the multiplication is "+(a*b));
+        break;
+        
+        case'/':
+        Console.WriteLine("the division is "+(a/b));
+        break;
+        
+        case'%':
+        Console.WriteLine("the modular division is "+(a%b));
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+public static void printweekname(){
+    Console.WriteLine("enter a value between 1-7");
+    int week=Convert.ToInt32(Console.ReadLine());
+    switch(week){
+        case 1:
+        Console.WriteLine("sunday");
+        break;
+        
+        case 2:
+        Console.WriteLine("monday");
+        break;
+        
+        case 3:
+        Console.WriteLine("tuesday");
+        break;       
+        
+        case 4:
+        Console.WriteLine("wednesday");
+        break;      
+        
+        case 5:
+        Console.WriteLine("thursday");
+        break;       
+        
+        case 6:
+        Console.WriteLine("friday");
+        break;       
+        
+        case 7:
+        Console.WriteLine("saturday");
+        break;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+public static void leapyear(){
+    
+    Console.WriteLine("enter a year to chech leap or non-leap");
+    int year=Convert.ToInt32(Console.ReadLine());
+    if((year%4==0) && (year%100!=0) || (year%400==0)){
+        Console.WriteLine("its a leap year man");
+    }
+    
+    else{
+        Console.WriteLine("not a leap year");
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+public static void factorial(){
+    int fact=1;
+    Console.WriteLine("enter a value");
+    int n=Convert.ToInt32(Console.ReadLine());
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+        
+    }
+    
+    Console.WriteLine("factorial is "+ fact);
+    
+}
+
+
+
+
+
+
+
+
+public static void starpattern(){
+    Console.WriteLine("enter no of rows to print the pattern");
+    int rows=Convert.ToInt32(Console.ReadLine());
+
+    for(int i=1;i<=rows;i++){
+        for(int j=1;j<=i;j++){
+            Console.Write("*"+" ");
+        }
+        Console.WriteLine();
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+public static void invertedstarpattern(){
+    Console.WriteLine("enter no of rows to print the  pattern");
+    int rows=Convert.ToInt32(Console.ReadLine());
+    
+    for(int i=1;i<=rows;i++){
+        for(int j=i;j<=rows;j++){
+            Console.Write("*"+" ");
+        }
+        
+        Console.WriteLine();
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+public static void charpattern(){
+    Console.WriteLine("enter no of rows to print pattern");
+    int rows=Convert.ToInt32(Console.ReadLine());
+    char ch='A';
+    for(int i=1;i<=rows;i++){
+        for(int j=1;j<=i;j++){
+            Console.Write(ch+" ");
+            ch++;
+        }
+        
+        Console.WriteLine();
+    }
+}
+
+
+
+
+
+
+
+
+public static void halfpyramidpattern(){
+    Console.WriteLine("enter no of rows to print pattern");
+    int rows=Convert.ToInt32(Console.ReadLine());
+    
+    for(int i=1;i<=rows;i++){
+        for(int j=1;j<=i;j++){
+            Console.Write(j+" ");// i or j both petti test
+        }
+        Console.WriteLine();
+    }
+    
+}
+
+
+
+
+
+
+
+
+public static void  binomialcoefficient(){
+    // ncr= n!/(n-r)!* r!
+    int n=Convert.ToInt32(Console.ReadLine());
+    int r=Convert.ToInt32(Console.ReadLine());
+    int nf=1;
+    int rf=1;
+    int nmr=1;
+    int k=n-r;
+    
+    for(int i=1;i<=n;i++){
+        nf=nf*i;
+    }
+    
+    for(int i=1;i<=r;i++){
+        rf=rf*i;
+    }
+    
+    for(int i=1;i<=k;i++){
+        nmr=nmr*i;
+    }
+    
+    int bincoff=nf/(nmr*rf);
+    Console.WriteLine(bincoff);
+    
+    
+    
+}
+
+
+
+
+
+
+
+public static void decimaltobinary()
+{
+    Console.Write("Enter a decimal number: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    string binary = "";
+    if (n == 0)
+    {
+        Console.WriteLine("Binary: 0");
+        return;
+    }
+
+    while (n > 0)
+    {
+        int rem = n % 2;
+        binary = rem + binary; // prepend the remainder
+        n=n/ 2;
+    }
+
+    Console.WriteLine("Binary: " + binary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        
+        // marks();
+        // calculator();
+        // printweekname();
+        // leapyear();
+        // factorial();
+        // starpattern();
+        // invertedstarpattern();
+        // charpattern();
+        // halfpyramidpattern();
+        // binomialcoefficient();
+        // decimaltobinary();
+        
+    }
+}
+
+
+}
